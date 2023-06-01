@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- My Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Boostrrap -->
+
+
+    <!-- Favicons -->
+    <link href="Frontend/images/iconn.png" rel="icon">
+    <link href="Frontend/images/iconn.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="Frontend/libraries/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="FrontEnd/libraries/Bootstrap/css/bootstrap.css">
+    <link href="Frontend/libraries/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="Frontend/libraries/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="Frontend/libraries/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="Frontend/libraries/remixicon/remixicon.css" rel="stylesheet">
+    <link href="Frontend/libraries/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
+    
+
+    <!--My Style CSS -->
+    <link rel="stylesheet" href="FrontEnd/styles/main.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+            <div class="logo ms-auto me-auto me-sm-auto ">
+                <a href="index.html" class="logo "><img src="Frontend/images/logo.png" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+    </header>
+    <!-- Akhir Navbar -->
+    <!-- Product section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top" src="Frontend/images/driver-1.png" alt="..." /></div>
+                <div class="col-md-6">
+                    <div class="card"></div>
+                    <h1 class="fw-bolder fs-2 mt-3">Nama driver</h1>
+                    <div class="fs-5">
+                        <ul>
+                            <li class="info-sopir"><i class="bi bi-file-earmark-person"></i><span class="">Rute
+                                    Lokasi</span>
+                                <span>Rute Tujuan</span>
+                            </li>
+                            <li class="info-sopir">Jam Berangkat</li>
+                            <li class="info-sopir">Jam Pulang</li>
+                            <li class="info-sopir">Alamat Sopir</li>
+                            <!-- <li>Jumlah Muatan Saat Ini</li>
+                            <li>Sisa Muatan</li> -->
+                        </ul>
+                    </div>
+                    <div class="card mb-3"></div>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active me-2" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-penumpang"
+                                aria-selected="true">Penumpang</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-barang"
+                                aria-selected="false">Barang</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-penumpang-tab">
+                            <form class="row">
+                                <div class="col-md-12">
+                                    <input type="name" class="form-control" id="inputName" placeholder="Nama Lengkap">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input type="number" class="form-control" id="inputNomorHp" placeholder="No HP">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input type="number" class="form-control" id="inputPenumpang"
+                                        placeholder="Jumlah penumpang">
+                                </div>
+                                <div class="col-md-6 mt-3 lokasi">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Lokasi</option>
+                                        <option value="Bantaeng">Bantaeng</option>
+                                        <option value="Jeneponto">Jeneponto</option>
+                                        <option value="Bulukumba">Bulukumba</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mt-3 tujuan">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Tujuan</option>
+                                        <option value="Bantaeng">Bantaeng</option>
+                                        <option value="Jeneponto">Jeneponto</option>
+                                        <option value="Bulukumba">Bulukumba</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Alamat Penjemputan">
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Alamat Tujuan">
+                                </div>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button class="btn btn-danger btn-login-login"
+                                        style="background-color: #FFDE00; color: #011B3E;border: 1px solid #011B3E;"
+                                        type="submit">Pesan Mobil</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-barang-tab">
+                            <form class="row">
+                                <div class="col-md-6">
+                                    <input type="name" class="form-control" id="inputName" placeholder="Nama Lengkap">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control" id="inputNomorHp" placeholder="No HP">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input type="tex" class="form-control" id="inputJenisBarang"
+                                        placeholder="Jenis Barang">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input type="text" class="form-control" id="inputJumlahBarang"
+                                        placeholder="Jumlah Barang">
+                                </div>
+                                <div class="col-md-6 mt-3 lokasi">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Lokasi</option>
+                                        <option value="Bantaeng">Bantaeng</option>
+                                        <option value="Jeneponto">Jeneponto</option>
+                                        <option value="Bulukumba">Bulukumba</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mt-3 tujuan">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Tujuan</option>
+                                        <option value="Bantaeng">Bantaeng</option>
+                                        <option value="Jeneponto">Jeneponto</option>
+                                        <option value="Bulukumba">Bulukumba</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Alamat Penjemputan">
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Alamat Tujuan">
+                                </div>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button class="btn btn-danger btn-login-login"
+                                        style="background-color: #FFDE00; color: #011B3E;border: 1px solid #011B3E;"
+                                        type="submit">Pesan Mobil</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related items section-->
+    <section>
+        <div class="container px-4 px-lg-5">
+            <div id="team" class="layanan-mobil mb-5">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>layanan</h2>
+                        <p>Temukan Mobil</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <a href="http://">
+                                <div class="card card-mobil">
+                                    <div class="pic"><img src="Frontend/images/driver.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Walter White</h4>
+                                        <p><span class="rute-1">Bantaeng</span><span> - </span><span
+                                                class="rute-2">Bantaeng</span></p>
+                                        <div class="detail-mobil mb-2">
+                                            <a href="#" class="btn-detail-mobil">Lihat Detail</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                            <div class="card card-mobil">
+                                <div class="pic"><img src="Frontend/images/driver-1.png" class="img-fluid" alt=""></div>
+                                <div class="member-info">
+                                    <h4>Sarah Jhonson</h4>
+                                    <p><span class="rute-1">Bantaeng</span><span> - </span><span
+                                            class="rute-2">Bantaeng</span></p>
+                                    <div class="detail-mobil mb-2">
+                                        <a href="#" class="btn-detail-mobil">Lihat Detail</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                            <div class="card card-mobil">
+                                <div class="pic"><img src="Frontend/images/driver-3.png" class="img-fluid" alt=""></div>
+                                <div class="member-info">
+                                    <h4>William Anderson</h4>
+                                    <p><span class="rute-1">Bantaeng</span><span> - </span><span
+                                            class="rute-2">Bantaeng</span></p>
+                                    <div class="detail-mobil mb-2">
+                                        <a href="#" class="btn-detail-mobil">Lihat Detail</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                            <div class="card card-mobil">
+                                <div class="pic"><img src="Frontend/images/driver-2.png" class="img-fluid" alt=""></div>
+                                <div class="member-info">
+                                    <h4>Amanda Jepson</h4>
+                                    <p><span class="rute-1">Bantaeng</span><span> - </span><span
+                                            class="rute-2">Bantaeng</span></p>
+                                    <div class="detail-mobil mb-2">
+                                        <a href="#" class="btn-detail-mobil">Lihat Detail</i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>GO ACT</h3>
+                            <p class="pb-3"><em>Aplikasi Pemesanan Mobil Antar Daerah dan Pengiriman Barang dengan
+                                    <b>Aman,
+                                        Cepat dan
+                                        Terpercaya</b></em></p>
+                            <p>
+                                Samata, Gowa <br>
+                                Sulawesi Selatan<br><br>
+                                <strong>No Hp:</strong> 6285796578508<br>
+                                <strong>Email:</strong> goact.id@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="https://www.instagram.com/go_act.id/" class="twitter"><i
+                                        class="bx bxl-twitter"></i></a>
+                                <a href="https://www.instagram.com/go_act.id/" class="facebook"><i
+                                        class="bx bxl-facebook"></i></a>
+                                <a href="https://www.instagram.com/go_act.id/" class="instagram"><i
+                                        class="bx bxl-instagram"></i></a>
+                                <a href="https://www.instagram.com/go_act.id/" class="google-plus"><i
+                                        class="bx bxl-skype"></i></a>
+                                <a href="https://www.instagram.com/go_act.id/" class="linkedin"><i
+                                        class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links bagian-footer">
+                        <h4>Navigasi</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="penumpang.html">Penumpang</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Barang</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Go ACT</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="Frontend/libraries/purecounter/purecounter_vanilla.js"></script>
+    <script src="Frontend/libraries/aos/aos.js"></script>
+    <script src="Frontend/libraries/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Frontend/libraries/glightbox/js/glightbox.min.js"></script>
+    <script src="Frontend/libraries/swiper/swiper-bundle.min.js"></script>
+    <script src="Frontend/libraries/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="Frontend/scripts/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul.nav-pills > li").click(function (e) {
+                $("ul.nav-pills > li").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
